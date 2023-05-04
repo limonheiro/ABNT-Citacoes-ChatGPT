@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- <h5>Envie a(s) imagem(ns)</h5>
+
+<hr/> -->
+<div class="container">
+  <form method="post" action="" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="file" class="form-label">Envie um artigo: formato PDF</label>
+      <input class="form-control w-auto" type="file" name="file" id="file">
+      <input class="form-control w-auto" placeholder="tag" type="text" name="tag" id="tag">
+    </div>
+    <button class="btn btn-primary" type="submit">Enviar</button>
+  </form>
+
+  {% if citation %}
+    <form>
+        <div class="form-group mb-3">
+          <label>Citação:</label>
+          <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10">
+             {{ citation }}
+          </textarea>
+        </div>
+    </form>
+  {% endif %}
+</div>
+
+{% endblock %}
